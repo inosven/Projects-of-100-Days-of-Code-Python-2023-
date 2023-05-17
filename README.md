@@ -8,4 +8,4 @@ While it may seem like a risky move to switch to coding during this winter of th
 This is just the first step, so let's mark it down and see where the journey leads.
 
 ## Learning from others
-If you are interested in communicating with me and other self-learners, please do not hesitate to reach out to me at [my email address]<quans1991@gmail.com>. Let's learn together and grow our knowledge!
+If you are interested in communicating with me and other self-learners, please do not hesitate to reach out to me at <quans1991@gmail.com>. Let's learn together and grow our knowledge!
