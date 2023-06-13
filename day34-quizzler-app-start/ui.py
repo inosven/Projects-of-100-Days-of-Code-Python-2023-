@@ -7,22 +7,22 @@ FONT = ["Arial", 20, "italic"]
 
 class QuizInterface:
 
-    def __int__(self, quiz_brain: QuizBrain):
+    def __init__(self, quiz_brain: QuizBrain):
         self.quiz = quiz_brain
         self.window = Tk()
-        self.window.tile("Quizzler")
+        self.window.title("Quizzler")
         self.window.config(padx=20, pady=20, bg=THEME_COLOR)
         self.canvas = Canvas(width=300, height=250, bg="white")
         self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
         self.score_label = Label(text="Score: 0", fg="white", bg=THEME_COLOR)
         self.score_label.grid(row=0, column=1)
-        self.right_img = PhotoImage("./images/true.png")
-        self.wrong_img = PhotoImage("./images/false.png")
-        self.right_button = Button(image=self.right_img, highlightthickness=0, compound=self.check_right)
-        self.wrong_button = Button(image=self.wrong_img, highlightthickness=0, compound=self.check_wrong)
+        self.right_img = PhotoImage(file="images/true.png")
+        self.wrong_img = PhotoImage(file="images/false.png")
+        self.right_button = Button(image=self.right_img, highlightthickness=0, command=self.check_right)
+        self.wrong_button = Button(image=self.wrong_img, highlightthickness=0, command=self.check_wrong)
         self.right_button.grid(row=2, column=1)
         self.wrong_button.grid(row=2, column=0)
-        self.question_text = self.canvas.create_text(150, 125, "question", fill=THEME_COLOR, font=FONT, width=280)
+        self.question_text = self.canvas.create_text(150, 125, text="question", fill=THEME_COLOR, font=FONT, width=280)
         self.next_question()
 
         self.window.mainloop()
